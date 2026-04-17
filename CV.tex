@@ -8,6 +8,7 @@
 \usepackage{enumitem} 
 \usepackage{titlesec} 
 \usepackage{mathpazo} % CAMBIO 1: Fuente Palatino (Mucho más elegante e imponente)
+\usepackage{setspace}
 
 % CAMBIO 2: Ocultar los horribles cuadros celestes y pintar los links de azul oscuro
 \usepackage[colorlinks=true, urlcolor=primary, linkcolor=primary]{hyperref} 
@@ -18,8 +19,10 @@
 
 % Formato de secciones con una línea separadora más fina
 \titleformat{\section}{\Large\bfseries\color{primary}}{}{0em}{}[\vspace{-0.2em}\rule{\textwidth}{0.5pt}]
-\titlespacing{\section}{0pt}{14pt}{8pt}
+\titlespacing{\section}{0pt}{4pt}{4pt}
 
+
+\setstretch{1.1}
 % Comando para las fechas a la derecha
 \newcommand{\dateright}[1]{\hfill \textcolor{graytext}{\small #1}}
 
@@ -37,7 +40,7 @@
 \vspace{2pt}
 \noindent
 MSc student specialized in system modeling and control with a deep passion for differential geometry and theoretical physics applied to robotics. My work focuses on developing energy-based control frameworks that prioritize passivity and intrinsic task safety through a physics-informed approach. Currently, my research bridges these rigorous control strategies with machine learning and image processing for robust fault diagnosis. I am highly motivated to apply my mathematical and mechatronic expertise to solve the high-precision challenges inherent in medical robotics.
-\vspace{12pt}
+\vspace{3pt}
 
 % --- INTERESES DE INVESTIGACIÓN ---
 \section{Research Interests}
@@ -53,7 +56,7 @@ King Fahd University of Petroleum and Minerals (KFUPM), Saudi Arabia \hfill \tex
     \item \textbf{Relevant Coursework:} Geometric Control for Robotics, Optimal Control, Linear Control Systems, Classical Mechanics, Adv. Methods for Theoretical Physics, Image Processing, Robot Perception.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{3pt}
 \textbf{Master in Automation and Control} \dateright{2024} \\
 Escuela Superior Politécnica del Litoral (ESPOL), Ecuador \hfill \textit{GPA: 99.46/100}
 \begin{itemize}[noitemsep, topsep=0pt]
@@ -61,7 +64,7 @@ Escuela Superior Politécnica del Litoral (ESPOL), Ecuador \hfill \textit{GPA: 9
     \item \textbf{Relevant Coursework:} Machine Learning-Based Control, Identification \& Control of Dynamic Systems, Industrial Robotics \& Computer Vision, Embedded Control Systems.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{3pt}
 \textbf{B.S. in Mechatronics Engineering} \dateright{2017 -- 2022} \\
 ESPOL, Ecuador
 \begin{itemize}[noitemsep, topsep=0pt]
@@ -76,7 +79,7 @@ ESPOL, Ecuador
     \item \textbf{Focus:} Development of a hierarchical framework that enforces deterministic physical safety via Port-Hamiltonian Energy Tanks while maintaining active fault tolerance through differential flatness-based re-planning on a 6-DOF Kinova Gen3.
 \end{itemize}
 
-\vspace{4pt}
+\vspace{2pt}
 
 \textbf{Spectral Signatures of Robot Faults: A Port-Hamiltonian Visual Diagnosis Framework} \dateright{Currently Working}
 \begin{itemize}[noitemsep, topsep=0pt]
