@@ -311,3 +311,11 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+# Application materials and local documents
+Aplicacion/
+CLAIM_LEDGER.md
+CV_FORENSIC_AUDIT.md
+CV_REDESIGN_PLAN.md
+FINAL_VERIFICATION_CHECKLIST.md
+SHAPE_AI_TECHNICAL_EXPERTISE_AUDIT.md

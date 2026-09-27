@@ -1,139 +1,179 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
-% --- PAQUETES ESENCIALES ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.5cm]{geometry} 
+\usepackage[default]{sourcesanspro}
+\usepackage[top=11.5mm,bottom=11.5mm,left=15.5mm,right=15.5mm]{geometry}
 \usepackage{xcolor}
-\usepackage{enumitem} 
-\usepackage{titlesec} 
-\usepackage{mathpazo} % CAMBIO 1: Fuente Palatino (Mucho más elegante e imponente)
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{hyperref}
 \usepackage{setspace}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
 
-% CAMBIO 2: Ocultar los horribles cuadros celestes y pintar los links de azul oscuro
-\usepackage[colorlinks=true, urlcolor=primary, linkcolor=primary]{hyperref} 
+% --- PALETA DE COLORES ELEGANTE Y COMPATIBLE ---
+\definecolor{primary}{HTML}{19304A}     % Azul marino pizarra profundo
+\definecolor{rulecolor}{HTML}{B9C3CD}   % Gris pizarra suave para líneas de sección
+\definecolor{metacolor}{HTML}{5F5F5F}   % Gris para fechas y tags
 
-% --- CONFIGURACIÓN DE COLORES Y TÍTULOS ---
-\definecolor{primary}{HTML}{004B87} % CAMBIO 3: Azul institucional oscuro (Elegante)
-\definecolor{graytext}{HTML}{4A4A4A}
+% --- CONFIGURACIÓN DE HYPERREF ---
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    hidelinks
+}
 
-% Formato de secciones con una línea separadora más fina
-\titleformat{\section}{\Large\bfseries\color{primary}}{}{0em}{}[\vspace{-0.2em}\rule{\textwidth}{0.5pt}]
-\titlespacing{\section}{0pt}{4pt}{4pt}
+% --- FORMATO DE SECCIONES IDÉNTICO A CV_NICOLAS ---
+\titleformat{\section}
+  {\fontsize{11}{13}\selectfont\bfseries\color{primary}}
+  {}{0em}
+  {}
+  [\vspace{-0.45em}\color{rulecolor}\rule{\textwidth}{0.4pt}\vspace{-0.35em}]
 
+\titlespacing{\section}{0pt}{3.5pt}{1.8pt}
 
-\setstretch{1.1}
-% Comando para las fechas a la derecha
-\newcommand{\dateright}[1]{\hfill \textcolor{graytext}{\small #1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.01}
+
+\newcommand{\entrytitle}[2]{%
+  \textbf{#1}\hfill\textcolor{metacolor}{\small #2}%
+}
+\newcommand{\entryinst}[2]{%
+  \textit{#1}\hfill{\small #2}%
+}
 
 \begin{document}
+\pagestyle{empty}
+
+% ==================== PÁGINA 1 ====================
 
 % --- ENCABEZADO ---
-\begin{center}
-    {\huge \bfseries Johnny García Betancourt} \\ \vspace{6pt}
-    \small 
-    Dhahran, Saudi Arabia $\cdot$ +966 53 522 1845 $\cdot$ \href{mailto:johnnygarciabet@gmail.com}{johnnygarciabet@gmail.com} \\
-    \href{https://linkedin.com/in/johnnygarciabet}{linkedin.com/in/johnnygarciabet}
-\end{center}
+{\fontsize{20}{23}\selectfont\textbf{Johnny Adrián García Betancourt}}\\[2pt]
+{\normalsize M.Sc. Student in Electrical Engineering \textbullet\ Control \& Robotics, KFUPM}\\[2pt]
+{\small
+  \textbullet\ \href{mailto:g202427540@kfupm.edu.sa}{g202427540@kfupm.edu.sa}
+  \ \textbullet\ \href{https://github.com/johnnyzxc5}{GitHub}
+  \ \textbullet\ \href{https://www.linkedin.com/in/johnnygarciabet}{LinkedIn}
+  \ \textbullet\ +966 53 522 1845
+}\\[3.5pt]
+{\color{primary}\rule{\textwidth}{0.9pt}}
+\vspace{-3pt}
 
-% --- SUMMARY / PROFILE ---
+% --- RESEARCH PROFILE ---
+\section*{Research Profile}
+Mechatronics engineer and M.Sc. researcher working at the intersection of Scientific Machine Learning (SciML), differential geometry, port-Hamiltonian systems, and physics-based modelling for nonlinear dynamical systems. My research integrates variational mechanics, passivity theory, differential flatness, and deep learning architectures to construct observer-free, structure-preserving representations directly from physical telemetry. Passionate about investigating how the internal geometry, symmetries, and energy invariants of neural representations interact with physical systems, with long-term research directions in scientific foundation models, structure-preserving learning, geometric deep learning, and inverse problems.
+
+% --- EDUCATION ---
+\section*{Education}
+
+\entrytitle{M.Sc. Student in Electrical Engineering -- Control \& Robotics Track}{2025--Present}\\
+\entryinst{King Fahd University of Petroleum \& Minerals (KFUPM), Saudi Arabia}{GPA: 3.938/4.00}\\
+\textbf{Thesis:} \textit{Bridging Physical Safety and Active Tolerance in Robotic Manipulators: A Hierarchical Energy-Aware Architecture.} Expected defense: December 2026--January 2027.\\
+\textbf{Selected Graduate Coursework:} Linear Control Systems (A+), Optimal Control Theory \& Applications (A+), Classical Mechanics (PHYS 507, A+), Advanced Methods for Theoretical Physics (PHYS 571, A+), Image Processing (A+), Special Topics in Intelligent Automation \& Robotics (A+), Robotics \& Control (A).
+
 \vspace{2pt}
+\entrytitle{Graduate Coursework in Automation and Control (Master's Program)}{2022--2024}\\
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{Certified Coursework Avg: 9.97/10}\\
+Completed advanced graduate coursework with near-perfect marks; transferred to KFUPM prior to thesis completion.\\
+\textbf{Selected Coursework:} Machine Learning-Based Control (100/100), Identification \& Control of Dynamic Systems (100/100), Embedded Control Systems (100/100), Industrial Robotics \& Computer Vision (97/100), Industrial Automation Systems (100/100).
+
+\vspace{2pt}
+\entrytitle{B.Sc. in Mechatronics Engineering (Engineer in Mechatronics)}{2017--2022}\\
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{Graduation Date: Dec 7, 2022}\\
+\textbf{Thesis:} \textit{Mechanical and Electrical Design, and Automation of an Industrial Liquid Filling Machine} (Thesis Grade: 9.20/10). Awarded Best Mechatronics Thesis.
+
+% --- RESEARCH EXPERIENCE ---
+\section*{Research Experience}
+
+\entrytitle{Spectral-Hamiltonian Algebraic Power Evaluation (SHAPE Framework)}{Research Project | KFUPM}\\
+Conceived and formulated an observer-free, physics-guided fault detection and isolation methodology interfacing port-Hamiltonian energy balance ($\dot{H} \le y^\top u$) with differential flatness. Formulated the algebraic port-power residual that computes nominal power trajectories directly from reference profiles, eliminating online observer synthesis and numerical differentiation. Led the multi-body physical simulation and trajectory data-generation pipeline on a 6-DOF Kinova Gen3 manipulator. Transitioned the methodology to native numerical tensors (multichannel temporal, CWT time-frequency scalograms, and FFT spectral tensors), co-designed a shared-encoder multi-joint CNN with late fusion, and personally implemented the training, evaluation, and benchmarking pipeline in Python/PyTorch, achieving a 91.7\% macro F1-score across nominal and degraded operating regimes.
+
+\vspace{2pt}
+\entrytitle{Hierarchical Energy-Aware Architecture for Safe Robotic Interaction}{M.Sc. Thesis | KFUPM}\\
+Developing a hierarchical control framework bridging deterministic physical passivity with active fault tolerance in robotic manipulators. Formulated a low-level Port-Hamiltonian Energy Tank supervisor to enforce strict passivity ($\dot{H} \le 0$) and bound energy injection under actuator Loss of Effectiveness (LoE). Developed a coordinate-free high-level trajectory planner parametrizing end-effector pose directly on the Lie group $\mathrm{SE}(3)$ along with kinematic self-motion for 7-DOF redundant manipulators, ensuring dynamic feasibility without coordinate singularities.
+
+\vspace{2pt}
+\entrytitle{Active Fault-Tolerant Flatness-Based Model Predictive Control}{Research Manuscript | Under Review}\\
+Developed an active fault-tolerant model predictive control architecture for nonlinear robotic manipulators subject to progressive actuator degradation. The formulation algebraically maps shrinking physical actuator torque limits into state-dependent acceleration constraints in flat output space, eliminating numerical chattering, reducing energy consumption by 66\% (from 17,064 to 5,668~$\text{N}^2\text{m}^2\text{s}$), and accelerating trajectory optimization to real-time execution speeds (0.01~s).
+
+\vspace{2pt}
+\entrytitle{Geometric Modelling and Invariant State Estimation}{Coursework \& Research Projects | KFUPM}\\
+Investigated geometric mechanics and symmetry-preserving estimation for underactuated nonlinear dynamical systems. Developed multi-body dynamic models for an underactuated underwater vehicle actuated by internal shifting mass and variable-buoyancy piston systems. Implemented closed-loop simulation and Kalman filtering state estimation architectures in MATLAB, Simulink, and Simscape Multibody, analyzing state reconstruction accuracy under measurement noise and unmodeled hydrodynamics as a foundation for invariant and structure-preserving learning.
+
+\clearpage
+
+% ==================== PÁGINA 2 ====================
+
+% --- RESEARCH MANUSCRIPTS & WORKING PAPERS ---
+\section*{Research Manuscripts \& Working Papers}
+
+\hangindent=1.5em \hangafter=1
+[1] \textbf{J. Garcia Betancourt} and N. Salguero España, ``Active Fault-Tolerant Flatness-Based MPC for Robotic Manipulators under Parametric Mismatch and Actuator Degradation,'' \textit{Research Manuscript}, under review, 2026.
+
+\vspace{2pt}
+\hangindent=1.5em \hangafter=1
+[2] \textbf{J. Garcia Betancourt}, N. Salguero España, N. Iqbal, B. Brahmi, and R. Rashad, ``Energy-Based Fault Detection and Isolation Framework for Flat Port-Hamiltonian Mechanical Systems,'' \textit{Research Manuscript}, in revision, 2026.
+
+\vspace{2pt}
+\hangindent=1.5em \hangafter=1
+[3] U. I. Castilla Batun and \textbf{J. A. Garcia Betancourt}, ``Techno-Economic Feasibility of Wind-Powered Hydrogen Production in Saudi Arabia: A Multi-Regional Assessment,'' \textit{Conference Paper}, under review, 2026.
+
+% --- TECHNICAL EXPERTISE ---
+\section*{Technical Expertise}
 \noindent
-MSc student specialized in system modeling and control with a deep passion for differential geometry and theoretical physics applied to robotics. My work focuses on developing energy-based control frameworks that prioritize passivity and intrinsic task safety through a physics-informed approach. Currently, my research bridges these rigorous control strategies with machine learning and image processing for robust fault diagnosis. I am highly motivated to apply my mathematical and mechatronic expertise to solve the high-precision challenges inherent in medical robotics.
-\vspace{3pt}
+{\small
+\renewcommand{\arraystretch}{0.95}
+\begin{tabularx}{\dimexpr\textwidth-2pt\relax}{@{}>{\bfseries\raggedright\arraybackslash}p{3.5cm} X@{}}
+Scientific ML \newline \& Deep Learning & Physics-guided representation learning; custom 1D/2D CNNs, shared-weight multi-joint encoders and late feature fusion; temporal, CWT time-frequency and FFT/spectral representations; comparative representation benchmarking; multi-seed evaluation, clustered bootstrap uncertainty quantification and robustness analysis; SVMs, PCA and t-SNE latent-space analysis. \\
+Mathematical Foundations \newline \& Differential Geometry & Linear and tensor algebra, multivariable calculus, ordinary and partial differential equations, Fourier and Laplace methods, numerical methods, probability and statistics, calculus of variations, constrained and convex optimization; smooth manifolds, tangent and cotangent bundles, differential forms, Lie brackets, Riemannian metrics, Lie groups and Lie algebras ($\mathrm{SE}(3)$, $\mathrm{SO}(3)$, $\mathfrak{se}(3)$, $\mathfrak{so}(3)$), exponential maps, and differential-geometric modelling. \\
+Analytical Mechanics \newline \& Energy-Based \newline Physical Modelling & Variational, Lagrangian and Hamiltonian mechanics; symplectic and Poisson formulations, conservation laws and symmetries, rigid-body and multibody mechanics, twists, wrenches, adjoint/coadjoint transformations and spatial-vector mechanics; port-Hamiltonian systems, Dirac structures, passivity, energy shaping, energy tanks, and power/energy-based modelling. \\
+Nonlinear Systems, \newline Control \& Optimization & Linear and nonlinear dynamical systems, state-space modelling, equilibrium and stability analysis, Lyapunov stability, LaSalle invariance, controllability and accessibility, geometric control, differential flatness, optimal control, MPC, Quadratic Programming (QP), trajectory optimization, inverse dynamics, and active fault-tolerant control. \\
+State Estimation, \newline Signal \& Image \newline Processing & Bayesian state estimation, Kalman filtering, Extended Kalman Filtering (EKF), Lie-group and invariant state-estimation concepts, SLAM foundations, Fourier and spectral analysis, digital filtering, Continuous Wavelet Transform (CWT), spatial and frequency-domain image processing, restoration, segmentation, mathematical morphology, feature extraction, pattern classification, and computer-vision foundations. \\
+Scientific Computing \newline \& Engineering Tools & Python, PyTorch, MATLAB, Simulink, Simscape Multibody, Git, \LaTeX, CAD/CAE (SolidWorks, Inventor, ANSYS), instrumentation, PLC/SCADA systems, and industrial communication protocols.
+\end{tabularx}\\[2pt]
+\textbf{Research interests:}\ \textit{scientific foundation models, structure-preserving learning, geometric deep learning, and inverse problems.}
+}
 
-% --- INTERESES DE INVESTIGACIÓN ---
-\section{Research Interests}
-System Modeling \& Control, Geometric Mechanics, Theoretical Physics applied to Robotics, Energy-Based Control (Passivity \& Intrinsic Safety), Fault Diagnosis (ML \& Image Processing), and Mechatronics.
+% --- ACADEMIC AND PROFESSIONAL EXPERIENCE ---
+\section*{Academic and Professional Experience}
 
-% --- EDUCACIÓN ---
-\section{Education}
-
-\textbf{Master of Science in Electrical Engineering (Control \& Robotics)} \dateright{2025 -- Present} \\
-King Fahd University of Petroleum and Minerals (KFUPM), Saudi Arabia \hfill \textit{GPA: 3.96/4.00}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Thesis:} Bridging Physical Safety and Active Tolerance in Robotic Manipulators: A Hierarchical Energy-Aware Architecture.
-    \item \textbf{Relevant Coursework:} Geometric Control for Robotics, Optimal Control, Linear Control Systems, Classical Mechanics, Adv. Methods for Theoretical Physics, Image Processing, Robot Perception.
-\end{itemize}
-
-\vspace{3pt}
-\textbf{Master in Automation and Control} \dateright{2024} \\
-Escuela Superior Politécnica del Litoral (ESPOL), Ecuador \hfill \textit{GPA: 99.46/100}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Thesis:} Self-Diagnosable Automation and SCADA System for Industrial Mixing Tanks utilizing Predictive Maintenance and Sensor-based Health Monitoring.
-    \item \textbf{Relevant Coursework:} Machine Learning-Based Control, Identification \& Control of Dynamic Systems, Industrial Robotics \& Computer Vision, Embedded Control Systems.
-\end{itemize}
-
-\vspace{3pt}
-\textbf{B.S. in Mechatronics Engineering} \dateright{2017 -- 2022} \\
-ESPOL, Ecuador
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Thesis:} Mechanical and Electrical Design, and Automation of an Industrial Liquid Filling Machine.
-\end{itemize}
-
-% --- PROYECTOS DE INVESTIGACIÓN ---
-\section{Research Projects}
-
-\textbf{Bridging Physical Safety and Active Tolerance in Robotic Manipulators: A Hierarchical Energy-Aware Architecture} \dateright{Thesis Project | Currently Working}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Focus:} Development of a hierarchical framework that enforces deterministic physical safety via Port-Hamiltonian Energy Tanks while maintaining active fault tolerance through differential flatness-based re-planning on a 6-DOF Kinova Gen3.
-\end{itemize}
+\entrytitle{Graduate Teaching \& Laboratory Assistant}{2025--Present}\\
+\entryinst{King Fahd University of Petroleum \& Minerals (KFUPM), Saudi Arabia}{}\\
+Instructing undergraduate laboratory sessions in electronics and instrumentation, delivering hands-on guidance on circuit analysis, operational amplifiers, signal conditioning, and electronic measurement systems.
 
 \vspace{2pt}
+\entrytitle{Teaching Assistant -- Statistics and Probability}{2022}\\
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{}\\
+Assisted undergraduate engineering courses; conducted problem-solving recitations on probability distributions, parameter estimation, and statistical data analysis; evaluated student assignments.
 
-\textbf{Spectral Signatures of Robot Faults: A Port-Hamiltonian Visual Diagnosis Framework} \dateright{Currently Working}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Focus:} Transformation of 1D Hamiltonian power residuals into 2D Time-Frequency Scalograms via Continuous Wavelet Transform (CWT) for CNN-based fault isolation of LoE, friction, and vibrations.
-\end{itemize}
+\vspace{2pt}
+\entrytitle{Undergraduate Research \& Prototyping Assistant}{2021--2022}\\
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{}\\
+Contributed to design and hardware prototyping for mechatronic machinery projects, assisting in CAD modeling, sensor interfacing, and PLC-based automated control routines.
 
-\vspace{4pt}
+\vspace{2pt}
+\entrytitle{Maintenance and Automation Coordinator}{2021--2024}\\
+\entryinst{Detecuador S.A., Ecuador}{}\\
+Supervised automated operations, industrial instrumentation, and predictive maintenance protocols for manufacturing facilities; engineered 2D/3D CAD solutions for electro-mechanical system modernization.
 
-\textbf{Fault-Tolerant Flatness-Based MPC via Dynamic Torque-to-Acceleration Constraint Mapping} \dateright{Under Review}
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item \textbf{Focus:} Exploiting differential flatness to obtain canonical linear prediction models and implementing dynamic constraint-mapping from physical torque limits to state-dependent acceleration bounds.
-\end{itemize}
+\vspace{2pt}
+\entrytitle{Assistant Electromechanical Designer}{2023--2024}\\
+\entryinst{SEOR S.A., Ecuador}{}\\
+Developed engineering blueprints, electrical control cabinets, and automation layouts for industrial machinery and packaging lines.
 
-% --- EXPERIENCIA ACADÉMICA Y DOCENTE ---
-\section{Academic Experience}
+% --- HONORS AND AWARDS ---
+\section*{Honors and Awards}
 
-\textbf{Electronics Laboratory Assistant} \dateright{2025 -- Present} \\
-King Fahd University of Petroleum and Minerals (KFUPM)
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Guided undergraduate students through hands-on electronics laboratory experiments, providing practical instruction on circuit analysis and instrumentation.
-\end{itemize}
+\textbf{Graduate Full Scholarship}, King Fahd University of Petroleum \& Minerals (KFUPM) \hfill 2025--Present\\
+\textbf{Best Mechatronics Thesis Award (1st Place)}, Escuela Superior Politécnica del Litoral \hfill 2022\\
+\textbf{Best University Thesis Award (2nd Place Institution-Wide)}, ESPOL \hfill 2022\\
+\textbf{Academic Excellence Recognition (Top Score)}, National University Admission Exam (SENESCYT) \hfill 2017
 
-\vspace{4pt}
+% --- LANGUAGES ---
+\section*{Languages}
 
-\textbf{Statistics Teaching Assistant} \dateright{2022} \\
-ESPOL, Facultad de Ingeniería Mecánica y Ciencias de la Producción (FIMCP)
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Instructed engineering students on statistical analysis and developed academic material for curriculum support.
-\end{itemize}
-
-% --- EXPERIENCIA PROFESIONAL ---
-\section{Professional Experience}
-
-\textbf{Detecuador S.A.} \dateright{2022 -- 2024} \\
-Maintenance Coordinator
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Managed mechatronic projects and utilized 2D/3D CAD for industrial infrastructure and automation solutions.
-\end{itemize}
-
-\vspace{4pt}
-
-\textbf{SEOR S.A.} \dateright{2023 -- 2024} \\
-Assistant Mechanical Designer
-\begin{itemize}[noitemsep, topsep=0pt]
-    \item Focused on the design and management of engineering plans and automation system integration.
-\end{itemize}
-
-% --- SKILLS ---
-\section{Technical Skills}
-\begin{description}[noitemsep, labelindent=0pt]
-    \item[Control \& Modeling:] High-Fidelity System Modeling, Geometric Control, Differential Geometry, Port-Hamiltonian Systems, Differential Flatness, Optimal Control, Passivity Based Control.
-    \item[Perception \& Estimation:] Invariant Kalman Filter on Manifolds, Pose Optimization, Fundamentals of SLAM.
-    \item[Mechatronics \& Design:] Mechatronic System Design, Advanced Industrial Instrumentation, Hardware Integration, Actuator Dynamics.
-    \item[Software \& Tools:] MATLAB/Simulink, Python, SolidWorks, ANSYS, LaTeX.
-\end{description}
+\textbf{Spanish} -- Native \qquad\qquad \textbf{English} -- Advanced / Academic working proficiency
 
 \end{document}
