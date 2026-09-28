@@ -51,7 +51,7 @@
 
 % --- ENCABEZADO ---
 {\fontsize{20}{23}\selectfont\textbf{Johnny Adrián García Betancourt}}\\[2pt]
-{\normalsize M.Sc. Student in Electrical Engineering \textbullet\ Control \& Robotics, KFUPM}\\[2pt]
+{\normalsize M.Sc. Researcher in Electrical Engineering | Geometric Mechanics \textbullet\ Nonlinear Dynamics \textbullet\ Physics-Guided ML}\\[2pt]
 {\small
   \textbullet\ \href{mailto:g202427540@kfupm.edu.sa}{g202427540@kfupm.edu.sa}
   \ \textbullet\ \href{https://github.com/johnnyzxc5}{GitHub}
@@ -63,44 +63,53 @@
 
 % --- RESEARCH PROFILE ---
 \section*{Research Profile}
-Mechatronics engineer and M.Sc. researcher studying the geometric, dynamical, and energetic structure of nonlinear physical systems and how that structure can guide machine-learning models. My work combines differential geometry, port-Hamiltonian modelling, passivity theory, differential flatness, and deep learning for physics-guided representation learning and fault diagnosis. I aim to extend this structural viewpoint toward Scientific Machine Learning and Scientific AI, developing learning methods that incorporate physical laws, geometry, symmetries, and energy structure into their representations and models.
+Mechatronics engineer and M.Sc. researcher studying the geometric, dynamical, and energetic structure of nonlinear physical systems and how it can guide machine-learning models. My work combines differential geometry, port-Hamiltonian modelling, passivity, differential flatness, and deep learning for physics-guided representation learning and fault diagnosis. I aim to extend this structural viewpoint toward Scientific Machine Learning and Scientific AI by incorporating physical laws, geometry, symmetries, and energetic structure into learning models.
 
 % --- EDUCATION ---
 \section*{Education}
 
 \entrytitle{M.Sc. Student in Electrical Engineering -- Control \& Robotics Track}{2025--Present}\\
 \entryinst{King Fahd University of Petroleum \& Minerals (KFUPM), Saudi Arabia}{GPA: 3.938/4.00}\\
-\textbf{Thesis:} \textit{Bridging Physical Safety and Active Tolerance in Robotic Manipulators: A Hierarchical Energy-Aware Architecture.} Expected defense: December 2026--January 2027.\\
-\textbf{Selected Graduate Coursework:} Linear Control Systems (A+), Optimal Control Theory \& Applications (A+), Classical Mechanics (PHYS 507, A+), Advanced Methods for Theoretical Physics (PHYS 571, A+), Image Processing (A+), Special Topics in Intelligent Automation \& Robotics (A+), Robotics \& Control (A).
+\textbf{Thesis:} \textit{Bridging Physical Safety and Active Tolerance in Robotic Manipulators: A Hierarchical Energy-Aware Architecture.}\\
+\textbf{Selected Coursework:} Classical Mechanics (PHYS 507, A+), Advanced Methods for Theoretical Physics (PHYS 571, A+).
 
-\vspace{2pt}
+\vspace{4.5pt}
 \entrytitle{Graduate Coursework in Automation and Control (Master's Program)}{2022--2024}\\
-\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{Certified Coursework Avg: 9.97/10}\\
-Completed advanced graduate coursework with near-perfect marks; transferred to KFUPM prior to thesis completion.\\
-\textbf{Selected Coursework:} Machine Learning-Based Control (100/100), Identification \& Control of Dynamic Systems (100/100), Embedded Control Systems (100/100), Industrial Robotics \& Computer Vision (97/100), Industrial Automation Systems (100/100).
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{}\\
+Coursework record: 10 of 11 completed courses graded A+ | Average: 9.68/10\\
+Completed advanced graduate coursework before transferring to KFUPM prior to thesis completion.\\
+\textbf{Selected Coursework:} Machine Learning-Based Control (A+), Industrial Robotics \& Computer Vision (A+).
 
-\vspace{2pt}
+\vspace{4.5pt}
 \entrytitle{B.Sc. in Mechatronics Engineering (Engineer in Mechatronics)}{2017--2022}\\
-\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{Graduation Date: Dec 7, 2022}\\
-\textbf{Thesis:} \textit{Mechanical and Electrical Design, and Automation of an Industrial Liquid Filling Machine} (Thesis Grade: 9.20/10). Awarded Best Mechatronics Thesis.
+\entryinst{Escuela Superior Politécnica del Litoral (ESPOL), Ecuador}{Thesis Grade: 9.20/10}\\
+\textbf{Thesis:} \textit{Mechanical and Electrical Design, and Automation of an Industrial Liquid Filling Machine.}
 
 % --- RESEARCH EXPERIENCE ---
 \section*{Research Experience}
 
 \entrytitle{Spectral-Hamiltonian Algebraic Power Evaluation (SHAPE Framework)}{Research Project | KFUPM}\\
-Conceived and formulated an observer-free, physics-guided fault detection and isolation methodology interfacing port-Hamiltonian energy balance ($\dot{H} \le y^\top u$) with differential flatness. Formulated the algebraic port-power residual that computes nominal power trajectories directly from reference profiles, eliminating online observer synthesis and numerical differentiation. Led the multi-body physical simulation and trajectory data-generation pipeline on a 6-DOF Kinova Gen3 manipulator. Transitioned the methodology to native numerical tensors (multichannel temporal, CWT time-frequency scalograms, and FFT spectral tensors), co-designed a shared-encoder multi-joint CNN with late fusion, and personally implemented the training, evaluation, and benchmarking pipeline in Python/PyTorch, achieving a 91.7\% macro F1-score across nominal and degraded operating regimes.
+Conceived and formulated a physics-guided fault-diagnosis framework combining port-Hamiltonian power structure with differential flatness to construct observer-free residuals. Led the physical simulation and data-generation pipeline, co-designed the multi-joint CNN, and worked directly on its Python/PyTorch implementation using temporal, CWT, and spectral representations.
 
 \vspace{2pt}
 \entrytitle{Hierarchical Energy-Aware Architecture for Safe Robotic Interaction}{M.Sc. Thesis | KFUPM}\\
-Developing a hierarchical control framework bridging deterministic physical passivity with active fault tolerance in robotic manipulators. Formulated a low-level Port-Hamiltonian Energy Tank supervisor to enforce strict passivity ($\dot{H} \le 0$) and bound energy injection under actuator Loss of Effectiveness (LoE). Developed a coordinate-free high-level trajectory planner parametrizing end-effector pose directly on the Lie group $\mathrm{SE}(3)$ along with kinematic self-motion for 7-DOF redundant manipulators, ensuring dynamic feasibility without coordinate singularities.
+Developing a fault-tolerant control architecture for redundant manipulators that combines port-Hamiltonian modelling and energy tanks with geometric trajectory replanning. The work investigates energy freezing and regulated tank exchange while adapting motion on the configuration manifold as actuator failures progressively restrict the robot's reachable configurations.
 
 \vspace{2pt}
-\entrytitle{Active Fault-Tolerant Flatness-Based Model Predictive Control}{Research Manuscript | Under Review}\\
-Developed an active fault-tolerant model predictive control architecture for nonlinear robotic manipulators subject to progressive actuator degradation. The formulation algebraically maps shrinking physical actuator torque limits into state-dependent acceleration constraints in flat output space, eliminating numerical chattering, reducing energy consumption by 66\% (from 17,064 to 5,668~$\text{N}^2\text{m}^2\text{s}$), and accelerating trajectory optimization to real-time execution speeds (0.01~s).
+\entrytitle{Active Fault-Tolerant Flatness-Based Model Predictive Control}{Research Manuscript | Revised for Resubmission}\\
+Developed an active fault-tolerant MPC formulation that maps actuator degradation into dynamically consistent constraints in flat-output space. The method adapts feasible trajectory tracking as available control authority decreases, using differential flatness to translate physical actuator limits into algebraic constraints suitable for predictive optimization.
 
 \vspace{2pt}
-\entrytitle{Geometric Modelling and Invariant State Estimation}{Coursework \& Research Projects | KFUPM}\\
-Investigated geometric mechanics and symmetry-preserving estimation for underactuated nonlinear dynamical systems. Developed multi-body dynamic models for an underactuated underwater vehicle actuated by internal shifting mass and variable-buoyancy piston systems. Implemented closed-loop simulation and Kalman filtering state estimation architectures in MATLAB, Simulink, and Simscape Multibody, analyzing state reconstruction accuracy under measurement noise and unmodeled hydrodynamics as a foundation for invariant and structure-preserving learning.
+\entrytitle{Geometric Modelling \& Invariant State Estimation of an Underwater Glider}{Coursework \& Research Projects | KFUPM}\\
+Modelled an underactuated underwater glider that achieves low-energy locomotion without conventional propulsive actuation, using internal mass displacement and variable buoyancy to modify its centre of gravity and effective density. Studied its nonlinear geometric dynamics and invariant state estimation in MATLAB/Simulink.
+
+\vspace{2pt}
+\entrytitle{Self-Diagnosing Process Automation \& Predictive Maintenance}{Graduate Research Project | ESPOL}\\
+Developed an automated liquid-processing system integrating recipe-based mixing, pumps, motors, pneumatic actuation, PLC/HMI control, and industrial communication through IO-Link. Integrated multi-parameter condition-monitoring sensors and explored MATLAB-based predictive-maintenance and machine-learning workflows for automated fault diagnosis and equipment health assessment.
+
+\vspace{2pt}
+\entrytitle{Design, Modelling \& Automation of an Industrial Liquid-Filling Machine}{B.Sc. Thesis | ESPOL}\\
+Designed and modelled an automated filling machine for viscous liquid products, integrating pneumatic actuation, fluid-flow calculations, electrical sizing, PLC/HMI control, and mechanical design. Performed coupled pneumatic/fluid calculations for dosing accuracy and cycle timing, and used CAD/CAE and finite-element analysis to dimension the liquid hopper and structural components.
 
 \clearpage
 
@@ -126,14 +135,13 @@ Investigated geometric mechanics and symmetry-preserving estimation for underact
 {\small
 \renewcommand{\arraystretch}{0.95}
 \begin{tabularx}{\dimexpr\textwidth-2pt\relax}{@{}>{\bfseries\raggedright\arraybackslash}p{3.5cm} X@{}}
-Scientific ML \newline \& Deep Learning & Physics-guided representation learning; custom 1D/2D CNNs, shared-weight multi-joint encoders and late feature fusion; temporal, CWT time-frequency and FFT/spectral representations; comparative representation benchmarking; multi-seed evaluation, clustered bootstrap uncertainty quantification and robustness analysis; SVMs, PCA and t-SNE latent-space analysis. \\
-Mathematical Foundations \newline \& Differential Geometry & Linear and tensor algebra, multivariable calculus, ordinary and partial differential equations, Fourier and Laplace methods, numerical methods, probability and statistics, calculus of variations, constrained and convex optimization; smooth manifolds, tangent and cotangent bundles, differential forms, Lie brackets, Riemannian metrics, Lie groups and Lie algebras, exponential maps, and differential-geometric modelling. \\
-Analytical Mechanics \newline \& Energy-Based \newline Physical Modelling & Variational, Lagrangian and Hamiltonian mechanics; symplectic and Poisson formulations, conservation laws and symmetries, rigid-body and multibody mechanics; port-Hamiltonian systems, Dirac structures, passivity, energy shaping, energy tanks, and power/energy-based modelling. \\
-Nonlinear Systems, \newline Control \& Optimization & Linear and nonlinear dynamical systems, state-space modelling, equilibrium and stability analysis, Lyapunov stability, LaSalle invariance, controllability and accessibility, geometric control, differential flatness, optimal control, MPC, Quadratic Programming (QP), trajectory optimization, inverse dynamics, and active fault-tolerant control. \\
-State Estimation, \newline Signal \& Image \newline Processing & Bayesian estimation, Lie-group and invariant state estimation, SLAM foundations, Fourier and spectral analysis, digital filtering, Continuous Wavelet Transform (CWT), spatial and frequency-domain image processing, feature extraction, pattern classification, and computer-vision foundations. \\
+Scientific ML \newline \& Deep Learning & Physics-guided representation learning; custom 1D/2D CNNs, shared-weight multi-joint encoders and late feature fusion; temporal, CWT time-frequency and FFT/spectral representations; comparative representation benchmarking; multi-seed evaluation, clustered bootstrap uncertainty quantification and robustness analysis; SVMs, PCA and t-SNE latent-space analysis. \\ \noalign{\vspace{4pt}}
+Mathematical Foundations \newline \& Differential Geometry & Linear and tensor algebra, multivariable calculus, ordinary and partial differential equations, Fourier and Laplace methods, numerical methods, probability and statistics, calculus of variations, constrained and convex optimization; smooth manifolds, tangent and cotangent bundles, differential forms, Lie brackets, Riemannian metrics, Lie groups and Lie algebras, exponential maps, and differential-geometric modelling. \\ \noalign{\vspace{4pt}}
+Analytical Mechanics \newline \& Energy-Based \newline Physical Modelling & Variational, Lagrangian and Hamiltonian mechanics; symplectic and Poisson formulations, conservation laws and symmetries, rigid-body and multibody mechanics; port-Hamiltonian systems, Dirac structures, passivity, energy shaping, energy tanks, and power/energy-based modelling. \\ \noalign{\vspace{4pt}}
+Nonlinear Systems, \newline Control \& Optimization & Linear and nonlinear dynamical systems, state-space modelling, equilibrium and stability analysis, Lyapunov stability, LaSalle invariance, controllability and accessibility, geometric control, differential flatness, optimal control, MPC, Quadratic Programming (QP), trajectory optimization, inverse dynamics, and active fault-tolerant control. \\ \noalign{\vspace{4pt}}
+State Estimation, \newline Signal \& Image \newline Processing & Bayesian estimation, Lie-group and invariant state estimation, SLAM foundations, Fourier and spectral analysis, digital filtering, Continuous Wavelet Transform (CWT), spatial and frequency-domain image processing, feature extraction, pattern classification, and computer-vision foundations. \\ \noalign{\vspace{4pt}}
 Scientific Computing \newline \& Engineering Tools & Python, PyTorch, MATLAB, Simulink, Simscape Multibody, Git, \LaTeX, CAD/CAE (SolidWorks, Inventor, ANSYS), instrumentation, PLC/SCADA systems, and industrial communication protocols.
-\end{tabularx}\\[2pt]
-\textbf{Research interests:}\ \textit{scientific foundation models, structure-preserving learning, geometric deep learning, and inverse problems.}
+\end{tabularx}\par
 }
 
 % --- ACADEMIC AND PROFESSIONAL EXPERIENCE ---
